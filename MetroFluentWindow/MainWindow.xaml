@@ -1,12 +1,49 @@
-﻿<Window x:Class="MetroFluentWindow.MainWindow"
+﻿<local:AcrylicWindow x:Class="MetroFluentWindow.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MetroFluentWindow"
         mc:Ignorable="d"
+                     	AllowsTransparency="True"
+                     WindowStyle="None"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+    <Grid
+		Background="#00000000">
+        <Rectangle x:Name="tintColorLayer"  Opacity="0.1">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="White" />
+            </Rectangle.Fill>
+        </Rectangle>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition
+					Width="*" />
+                <ColumnDefinition
+					Width="2*" />
+            </Grid.ColumnDefinitions>
+            <Grid
+				Background="#00000000">
+                <StackPanel
+					VerticalAlignment="Center"
+					Margin="24, 0">
+                    <TextBlock
+						Text="Fluent WPF"
+						FontSize="24" />
+                    <TextBlock
+						Text="inheriting from Window" />
+                </StackPanel>
+            </Grid>
+            <Grid
+			Grid.Column="1"
+			Background="#FFFFFFFF">
+                <TextBlock
+				FontSize="24">
+				<Run
+					Text="Fluent WPF" />
+                </TextBlock>
+            </Grid>
+        </Grid>
+
     </Grid>
-</Window>
+</local:AcrylicWindow>
