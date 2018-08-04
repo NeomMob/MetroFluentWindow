@@ -6,11 +6,12 @@
         xmlns:local="clr-namespace:MetroFluentWindow"
         mc:Ignorable="d"
                      	AllowsTransparency="True"
+                     Background="Transparent"
                      WindowStyle="None"
         Title="MainWindow" Height="350" Width="525">
     <Grid
 		Background="#00000000">
-        <Rectangle x:Name="tintColorLayer"  Opacity="0.1">
+        <Rectangle x:Name="tintColorLayer"  Opacity="0.6">
             <Rectangle.Fill>
                 <SolidColorBrush Color="White" />
             </Rectangle.Fill>
